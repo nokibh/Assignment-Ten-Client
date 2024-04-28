@@ -1,24 +1,28 @@
 import { IoMdAddCircle } from 'react-icons/io';
 import Swal from 'sweetalert2';
+import UseAuth from '../Hooks/UseAuth';
 
 const AddTourist = ({ update }) => {
+  const { user } = UseAuth();
   const handleAddUser = e => {
     e.preventDefault();
 
     const form = e.target;
     const name = form.name.value;
-    const spot = form.spot.value;
+    const country = form.country.value;
     const location = form.location.value;
     const price = form.price.value;
     const description = form.description.value;
-    const email = form.email.value;
+    // const email = form.email.value;
     const photo = form.photo.value;
+    const spot = form.spot.value;
     const session = form.session.value;
     const travel = form.travel.value;
     const visitor = form.visitor.value;
-
+    const email = user.email;
     const addAll = {
       name,
+      country,
       spot,
       location,
       price,
@@ -40,13 +44,14 @@ const AddTourist = ({ update }) => {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        if (data.insertedId) {
+        if (data?.insertedId) {
           Swal.fire({
             title: 'Success!',
             text: 'User added Successfully',
             icon: 'success',
             confirmButtonText: 'Cool',
           });
+          form.reset();
         }
       });
   };
@@ -83,14 +88,15 @@ const AddTourist = ({ update }) => {
                 name="name"
               />
               <label className="block mb-2 dark:text-white" htmlFor="name">
-                Tourist Spot
+                Country
               </label>
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#4952ff]"
                 type="text"
-                placeholder="Tourist spot name"
+                placeholder="Country Name"
+                defaultValue="bangladesh"
                 id="spot-name"
-                name="spot"
+                name="country"
               />
 
               <label
@@ -145,7 +151,7 @@ const AddTourist = ({ update }) => {
               <input
                 className="w-full p-2 border rounded-md focus:outline-[#5549ffc3]"
                 type="text"
-                placeholder="Enter time"
+                placeholder="Description"
                 id="Price"
                 name="description"
               />
@@ -153,16 +159,6 @@ const AddTourist = ({ update }) => {
 
             {/* Right side */}
             <div className="flex-1">
-              <label className="block mb-2 dark:text-white" htmlFor="image">
-                Email
-              </label>
-              <input
-                className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
-                type="text"
-                placeholder="Enter Your Email"
-                id="image"
-                name="email"
-              />
               <label className="block mb-2 dark:text-white" htmlFor="image">
                 Image_url
               </label>
@@ -172,6 +168,17 @@ const AddTourist = ({ update }) => {
                 placeholder="Enter Image URL"
                 id="image"
                 name="photo"
+              />
+
+              <label className="block mb-2 dark:text-white" htmlFor="image">
+                Tourist Spot
+              </label>
+              <input
+                className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
+                type="text"
+                placeholder="Spot name"
+                id="image"
+                name="spot"
               />
               <label
                 className="block mt-4 mb-2 dark:text-white"
