@@ -7,34 +7,34 @@ const AddTourist = ({ update }) => {
     const form = e.target;
     const name = form.name.value;
     const spot = form.spot.value;
-    const category = form.category.value;
+    const location = form.location.value;
     const price = form.price.value;
     const description = form.description.value;
     const email = form.email.value;
-    const image = form.image.value;
+    const photo = form.photo.value;
     const session = form.session.value;
     const travel = form.travel.value;
-    const stock = form.stock.value;
+    const visitor = form.visitor.value;
 
-    const user = {
+    const addAll = {
       name,
       spot,
-      category,
+      location,
       price,
       description,
       email,
-      image,
+      photo,
       session,
       travel,
-      stock,
+      visitor,
     };
-    console.log(user);
+    console.log(addAll);
     fetch('http://localhost:5000/spots', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(addAll),
     })
       .then(res => res.json())
       .then(data => {
@@ -70,7 +70,7 @@ const AddTourist = ({ update }) => {
                 className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
                 type="text"
                 placeholder="Enter Your Name"
-                id="image"
+                id="name"
                 name="name"
               />
               <label className="block mb-2 dark:text-white" htmlFor="name">
@@ -80,7 +80,7 @@ const AddTourist = ({ update }) => {
                 className="w-full p-2 border rounded-md focus:outline-[#4952ff]"
                 type="text"
                 placeholder="Tourist spot name"
-                id="name"
+                id="spot-name"
                 name="spot"
               />
 
@@ -91,25 +91,25 @@ const AddTourist = ({ update }) => {
                 Location
               </label>
               <select
-                name="category"
+                name="location"
                 id="brand"
                 className="w-full p-2 border rounded-md focus:outline-[#6a49ffc2]"
                 type="text"
-                placeholder="Select Brand"
+                placeholder="Select location"
               >
-                <option value="Landscape Painting" selected>
+                <option value="Sundarban" selected>
                   Sundarban
                 </option>
-                <option value="Portrait Drawing" selected>
+                <option value=" Cox's Bazar" selected>
                   Cox's Bazar
                 </option>
-                <option value="Water-colour Painting" selected>
+                <option value=" Rangamati" selected>
                   Rangamati
                 </option>
-                <option value="Oil Painting" selected>
+                <option value=" Bandarban" selected>
                   Bandarban
                 </option>
-                <option value="Charcoal Sketching" selected>
+                <option value="Sain Martin" selected>
                   Sain Martin
                 </option>
               </select>
@@ -162,7 +162,7 @@ const AddTourist = ({ update }) => {
                 type="text"
                 placeholder="Enter Image URL"
                 id="image"
-                name="image"
+                name="photo"
               />
               <label
                 className="block mt-4 mb-2 dark:text-white"
@@ -177,10 +177,10 @@ const AddTourist = ({ update }) => {
                 type="text"
                 placeholder="Select Brand"
               >
-                <option value="yes" selected>
+                <option value="Summer" selected>
                   Summer
                 </option>
-                <option value="no" selected>
+                <option value="Winter" selected>
                   Winter
                 </option>
               </select>
@@ -197,7 +197,7 @@ const AddTourist = ({ update }) => {
                 max={7}
                 min={0}
                 type="number"
-                placeholder="Enter Rating"
+                placeholder="Day"
                 id="rating"
                 name="travel"
               />
@@ -209,7 +209,7 @@ const AddTourist = ({ update }) => {
                 Total Visitor
               </label>
               <input
-                name="stock"
+                name="visitor"
                 id="brand"
                 className="w-full p-2 border rounded-md focus:outline-[#494fffbd]"
                 type="text"
