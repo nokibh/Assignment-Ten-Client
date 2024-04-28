@@ -87,18 +87,6 @@ const AddTourist = ({ update }) => {
                 id="name"
                 name="name"
               />
-              <label className="block mb-2 dark:text-white" htmlFor="name">
-                Country
-              </label>
-              <input
-                className="w-full p-2 border rounded-md focus:outline-[#4952ff]"
-                type="text"
-                placeholder="Country Name"
-                defaultValue="bangladesh"
-                id="spot-name"
-                name="country"
-              />
-
               <label
                 className="block mt-4 mb-2 dark:text-white"
                 htmlFor="brand"
@@ -106,28 +94,45 @@ const AddTourist = ({ update }) => {
                 Location
               </label>
               <select
-                name="location"
+                name="country"
                 id="brand"
                 className="w-full p-2 border rounded-md focus:outline-[#6a49ffc2]"
                 type="text"
-                placeholder="Select location"
+                placeholder="Select Country"
               >
-                <option value="Sundarban" selected>
-                  Sundarban
+                <option value="Bangladesh" selected>
+                  Bangladesh
                 </option>
-                <option value=" Cox's Bazar" selected>
-                  Cox's Bazar
+                <option value="Thailand" selected>
+                  Thailand
                 </option>
-                <option value=" Rangamati" selected>
-                  Rangamati
+                <option value="Indonesia" selected>
+                  Indonesia
                 </option>
-                <option value=" Bandarban" selected>
-                  Bandarban
+                <option value="Malaysia" selected>
+                  Malaysia
                 </option>
-                <option value="Sain Martin" selected>
-                  Sain Martin
+                <option value="Vietnam" selected>
+                  Vietnam
+                </option>
+                <option value="Cambodia" selected>
+                  Cambodia
                 </option>
               </select>
+
+              <label
+                className="block mt-4 mb-2 dark:text-white"
+                htmlFor="price"
+              >
+                Location
+              </label>
+              <input
+                className="w-full p-2 border rounded-md focus:outline-[#494fffbd]"
+                type="text"
+                placeholder="location"
+                id="Price"
+                name="location"
+              />
 
               <label
                 className="block mt-4 mb-2 dark:text-white"
