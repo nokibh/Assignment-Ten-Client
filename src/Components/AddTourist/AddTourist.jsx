@@ -5,20 +5,24 @@ const AddTourist = ({ update }) => {
     e.preventDefault();
 
     const form = e.target;
+    const name = form.name.value;
     const spot = form.spot.value;
     const category = form.category.value;
     const price = form.price.value;
     const description = form.description.value;
+    const email = form.email.value;
     const image = form.image.value;
     const session = form.session.value;
     const travel = form.travel.value;
     const stock = form.stock.value;
 
     const user = {
+      name,
       spot,
       category,
       price,
       description,
+      email,
       image,
       session,
       travel,
@@ -59,6 +63,16 @@ const AddTourist = ({ update }) => {
         <form onSubmit={handleAddUser}>
           <div className="flex gap-8 ">
             <div className="flex-1">
+              <label className="block mb-2 dark:text-white" htmlFor="image">
+                Name
+              </label>
+              <input
+                className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
+                type="text"
+                placeholder="Enter Your Name"
+                id="image"
+                name="name"
+              />
               <label className="block mb-2 dark:text-white" htmlFor="name">
                 Tourist Spot
               </label>
@@ -130,6 +144,16 @@ const AddTourist = ({ update }) => {
 
             {/* Right side */}
             <div className="flex-1">
+              <label className="block mb-2 dark:text-white" htmlFor="image">
+                Email
+              </label>
+              <input
+                className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
+                type="text"
+                placeholder="Enter Your Email"
+                id="image"
+                name="email"
+              />
               <label className="block mb-2 dark:text-white" htmlFor="image">
                 Image_url
               </label>
