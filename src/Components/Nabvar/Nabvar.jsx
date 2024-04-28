@@ -37,7 +37,7 @@ const Nabvar = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-[#be700ac1] border border-[#be0a5563] p-2 rounded'
+                      ? 'text-[#ac59d2] border border-[#be0a5563] p-2 rounded'
                       : 'font-bold'
                   }
                 >
@@ -47,7 +47,7 @@ const Nabvar = () => {
                   to="/addspot"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                      ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded'
                       : 'font-bold'
                   }
                 >
@@ -57,27 +57,17 @@ const Nabvar = () => {
                   to="/mylist"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                      ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded'
                       : 'font-bold'
                   }
                 >
                   My List
                 </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    isActive
-                      ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
-                      : 'font-bold'
-                  }
-                >
-                  Contact Us
-                </NavLink>
               </ul>
             </div>
             <NavLink to="/" className="btn btn-ghost font-bold text-xl">
-              <span className="text-[#0ab5be8b]">Relaxation</span>
-              <span className=" text-[#b20abe9a]">Residence</span>
+              <span className="text-[#0ab5be8b]">Summer</span>
+              <span className=" text-[#b20abe9a]">Trip</span>
             </NavLink>
           </div>
 
@@ -87,7 +77,7 @@ const Nabvar = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded '
+                    ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded '
                     : 'font-bold'
                 }
               >
@@ -97,7 +87,7 @@ const Nabvar = () => {
                 to="/addspot"
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded'
                     : 'font-bold'
                 }
               >
@@ -107,7 +97,7 @@ const Nabvar = () => {
                 to="/mylist"
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                    ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded'
                     : 'font-bold'
                 }
               >
@@ -119,7 +109,7 @@ const Nabvar = () => {
                   to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? 'text-[#23BE0A] border border-[#22be0a4e] p-2 rounded'
+                      ? 'text-[#ac59d2] border border-[#22be0a4e] p-2 rounded'
                       : 'font-bold'
                   }
                 >
@@ -149,7 +139,7 @@ const Nabvar = () => {
                 </div>
               </div>
             ) : (
-              <NavLink to="/login" className="btn bg-[#59d259]">
+              <NavLink to="/login" className="btn bg-[#ac59d2]">
                 login
               </NavLink>
             )}

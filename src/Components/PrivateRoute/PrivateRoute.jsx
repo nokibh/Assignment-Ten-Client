@@ -6,7 +6,7 @@ const PrivateRoute = ({ children }) => {
   if (!user) {
     return <Login></Login>;
   }
-  return <div></div>;
+  return <div>{children}</div>;
 };
 
 export default PrivateRoute;
