@@ -1,10 +1,18 @@
-import { useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const Country = () => {
-  const countris = useLoaderData();
+  const [item, setItem] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/country')
+      .then(res => res.json())
+      .then(data => {
+        setItem(data);
+      });
+  }, []);
+
   return (
     <div>
-      {countris.map(p => (
+      {item.map(p => (
         <div key={p._id}>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mb-4">
             <div className="card w-80 hover:scale-105 bg-base-100 shadow-xl ">

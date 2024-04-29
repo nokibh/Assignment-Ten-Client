@@ -54,11 +54,6 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>,
       },
-      {
-        path: '/country',
-        element: <Country></Country>,
-        loader: () => fetch('http://localhost:5000/country'),
-      },
     ],
   },
 ]);

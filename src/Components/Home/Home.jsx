@@ -1,9 +1,11 @@
-import Banner from '../Banner/Banner';
+// import Banner from '../Banner/Banner';
+import Country from '../Country/Country';
 
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
+      <Country></Country>
     </div>
   );
 };
