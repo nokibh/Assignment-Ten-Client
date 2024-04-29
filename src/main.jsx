@@ -12,6 +12,8 @@ import MyList from './Components/MyList/MyList';
 import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Country from './Components/Country/Country';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -24,11 +26,21 @@ const router = createBrowserRouter([
       },
       {
         path: '/addspot',
-        element: <AddTourist></AddTourist>,
+        element: (
+          <PrivateRoute>
+            {' '}
+            <AddTourist></AddTourist>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/mylist',
-        element: <MyList></MyList>,
+        element: (
+          <PrivateRoute>
+            {' '}
+            <MyList></MyList>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/contact',
@@ -41,6 +53,11 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/country',
+        element: <Country></Country>,
+        loader: () => fetch('http://localhost:5000/country'),
       },
     ],
   },

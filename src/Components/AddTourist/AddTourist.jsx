@@ -91,7 +91,7 @@ const AddTourist = ({ update }) => {
                 className="block mt-4 mb-2 dark:text-white"
                 htmlFor="brand"
               >
-                Location
+                Country Name
               </label>
               <select
                 name="country"
