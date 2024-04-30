@@ -7,7 +7,7 @@ const Category = ({ category }) => {
   return (
     <div>
       <div className="">
-        <div className="card w-80 h-80 hover:scale-105 bg-base-100 shadow-xl ">
+        <div className="card w-72 h-80 hover:scale-105 bg-base-100 shadow-xl ">
           <figure className="px-3 h-80 pt-3">
             <img src={photo} alt="Shoes" className="rounded-xl" />
           </figure>
