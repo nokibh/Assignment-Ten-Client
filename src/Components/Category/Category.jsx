@@ -1,3 +1,4 @@
+import { IoLocationSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
 const Category = ({ category }) => {
@@ -8,12 +9,17 @@ const Category = ({ category }) => {
   return (
     <div>
       <div className="">
-        <div className="card w-72 bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
-            <img src={photo} alt="Shoes" className="rounded-xl" />
+        <div className="card w-72 h-full  hover:scale-105 bg-base-100 shadow-xl">
+          <figure className="px-10 pt-10 ">
+            <img src={photo} alt="Shoes" className="rounded-xl " />
           </figure>
           <div className="card-body items-center text-center">
-            <h2 className="card-title">{location}</h2>
+            <h2 className="card-title text-2xl">
+              <span>
+                <IoLocationSharp />
+              </span>{' '}
+              {location}
+            </h2>
             <p className="font-bold">Country : {country}</p>
             <div className="flex gap-2">
               <p className="font-bold">Cost : {price}</p>

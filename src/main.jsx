@@ -66,10 +66,10 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/update/:id',
+        path: 'update/:id',
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/country${params.id}`),
+          fetch(`http://localhost:5000/country/${params.id}`),
       },
     ],
   },

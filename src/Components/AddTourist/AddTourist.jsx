@@ -237,7 +237,7 @@ const AddTourist = () => {
           <input
             className="px-4 w-full py-2 mt-4 rounded hover:bg-[#6a49ffca]  bg-[#49dbff9f] duration-200 text-white cursor-pointer font-semibold"
             type="submit"
-            value="Add Product"
+            value="Add Tourist Spot"
           />
         </form>
       </div>
