@@ -1,8 +1,7 @@
-import { IoMdAddCircle } from 'react-icons/io';
 import Swal from 'sweetalert2';
 import UseAuth from '../Hooks/UseAuth';
 
-const AddTourist = ({ update }) => {
+const AddTourist = () => {
   const { user } = UseAuth();
   const handleAddUser = e => {
     e.preventDefault();
@@ -65,11 +64,7 @@ const AddTourist = ({ update }) => {
               <i className="bx bxs-alarm-add"></i>
             </span>
             <span className="dark:text-white flex justify-center gap-2">
-              <span className="text-[#6a49ffca] flex justify-center  gap-3">
-                <IoMdAddCircle />
-                {update ? 'Update ' : 'Add '}
-              </span>
-              Tourist Spot
+              Add Tourist Spot
             </span>
           </p>
         </div>

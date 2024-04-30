@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const ViewList = ({ item }) => {
@@ -53,7 +54,9 @@ const ViewList = ({ item }) => {
               <td>{country}</td>
               <td>{location}</td>
               <th>
-                <button>Update</button>
+                <Link to={`/update/${_id}`}>
+                  <button>Update</button>
+                </Link>
               </th>
               <th>
                 <button onClick={() => handleDelete(_id)}>Delete</button>

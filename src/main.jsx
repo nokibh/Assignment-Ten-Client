@@ -15,6 +15,7 @@ import Register from './Components/Register/Register';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Country from './Components/Country/Country';
 import Details from './Components/Details/Details';
+import Update from './Components/Update/Update';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -63,6 +64,12 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/mylist${params.id}`),
       },
     ],
   },
