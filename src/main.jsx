@@ -13,7 +13,7 @@ import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-import Country from './Components/Country/Country';
+// import Country from './Components/Country/Country';
 import Details from './Components/Details/Details';
 import Update from './Components/Update/Update';
 const router = createBrowserRouter([
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         path: '/update/:id',
         element: <Update></Update>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/mylist${params.id}`),
+          fetch(`http://localhost:5000/country${params.id}`),
       },
     ],
   },
