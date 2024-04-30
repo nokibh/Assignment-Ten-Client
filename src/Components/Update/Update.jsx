@@ -13,13 +13,13 @@ const Update = () => {
     price,
     travel,
     session,
-
+    _id,
     description,
 
     spot,
   } = list;
   const { user } = UseAuth();
-  const handleAddUser = e => {
+  const handleUpdateSpot = e => {
     e.preventDefault();
 
     const form = e.target;
@@ -35,7 +35,7 @@ const Update = () => {
     const travel = form.travel.value;
     const visitor = form.visitor.value;
     const email = user.email;
-    const addAll = {
+    const updateSpot = {
       name,
       country,
       spot,
@@ -48,21 +48,21 @@ const Update = () => {
       travel,
       visitor,
     };
-    console.log(addAll);
-    fetch('http://localhost:5000/spots', {
-      method: 'POST',
+    console.log(updateSpot);
+    fetch(`http://localhost:5000/country/${_id}`, {
+      method: 'PUT',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(addAll),
+      body: JSON.stringify(updateSpot),
     })
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        if (data?.insertedId) {
+        if (data?.modifiedCount > 0) {
           Swal.fire({
             title: 'Success!',
-            text: 'User added Successfully',
+            text: 'Spot Updated Successfully',
             icon: 'success',
             confirmButtonText: 'Cool',
           });
@@ -87,7 +87,7 @@ const Update = () => {
             </p>
           </div>
           {/* form */}
-          <form onSubmit={handleAddUser}>
+          <form onSubmit={handleUpdateSpot}>
             <div className="flex gap-8 ">
               <div className="flex-1">
                 <label className="block mb-2 dark:text-white" htmlFor="image">

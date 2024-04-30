@@ -46,7 +46,7 @@ const AddTourist = () => {
         if (data?.insertedId) {
           Swal.fire({
             title: 'Success!',
-            text: 'User added Successfully',
+            text: 'Tourist  added Successfully',
             icon: 'success',
             confirmButtonText: 'Cool',
           });
