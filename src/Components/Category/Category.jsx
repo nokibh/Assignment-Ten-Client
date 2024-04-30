@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom';
+
 const Category = ({ category }) => {
   console.log(category);
-  const { photo, country } = category;
+  const { _id, photo, country } = category;
   console.log(category);
   return (
     <div>
@@ -10,7 +12,13 @@ const Category = ({ category }) => {
             <img src={photo} alt="Shoes" className="rounded-xl" />
           </figure>
           <div className=" w-full group-hover:bg-[#ab31a5] rounded h-10 mt-2 bg-[#ff497d8f] flex justify-center items-center">
-            <p className="text-center font-bold text-white">{country}</p>
+            <div>
+              <Link to={`/Card/${_id}`}>
+                <button className="text-center font-bold text-white">
+                  {country}
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

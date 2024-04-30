@@ -43,11 +43,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      // {
-      //   path: '/Card/:id',
-      //   element: <Details></Details>,
-      //   loader: () => fetch(''),
-      // },
+      {
+        path: '/Card/:id',
+        element: <Details></Details>,
+        loader: () => fetch('http://localhost:5000/country'),
+      },
       {
         path: '/contact',
         element: <Contact></Contact>,
