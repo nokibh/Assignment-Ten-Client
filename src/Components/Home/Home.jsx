@@ -1,11 +1,14 @@
-// import Banner from '../Banner/Banner';
+import Banner from '../Banner/Banner';
 import Country from '../Country/Country';
 
 const Home = () => {
   return (
-    <div>
-      {/* <Banner></Banner> */}
-      <Country></Country>
+    <div className="mt-5 mb-5">
+      <Banner></Banner>
+
+      <div>
+        <Country></Country>
+      </div>
     </div>
   );
 };

@@ -14,6 +14,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Country from './Components/Country/Country';
+import Details from './Components/Details/Details';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // {
+      //   path: '/Card/:id',
+      //   element: <Details></Details>,
+      //   loader: () => fetch(''),
+      // },
       {
         path: '/contact',
         element: <Contact></Contact>,

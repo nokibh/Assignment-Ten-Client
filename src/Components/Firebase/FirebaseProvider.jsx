@@ -22,14 +22,7 @@ const FirebaseProvider = ({ children }) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  // update
-  const updateProfile = (name, email, image) => {
-    return updateProfile(auth.currentUser, {
-      displayName: name,
-      email: email,
-      photoURL: image,
-    });
-  };
+
   // sign in user
   const signInUser = (email, password) => {
     setLoading(true);
@@ -68,7 +61,6 @@ const FirebaseProvider = ({ children }) => {
     logOut,
     user,
     loading,
-    updateProfile,
   };
   return (
     <div>

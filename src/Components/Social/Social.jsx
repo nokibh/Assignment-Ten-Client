@@ -2,17 +2,23 @@ import { FaGithub } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import UseAuth from '../Hooks/UseAuth';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import Swal from 'sweetalert2';
 const Social = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const form = location?.state || '/';
   const { googleLogin, githubLogin } = UseAuth();
   const handleGoogleLogin = () => {
-    alert('Wow logIn successfully');
     googleLogin().then(result => {
       if (result.user) {
         navigate(form);
+        Swal.fire({
+          title: 'Success!',
+          text: 'User login Successfully',
+          icon: 'success',
+          confirmButtonText: 'Cool',
+        });
+        form.reset();
       }
     });
   };
