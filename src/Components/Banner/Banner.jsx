@@ -47,9 +47,9 @@ const Banner = () => {
                   <div className="slide1 slide100">
                     <h1 className=" text-3xl  lg:mb-36 md:text-bold md:mb-10">
                       {' '}
-                      Nature's grandeur on canvas – mountains and forests.{' '}
-                      <br />{' '}
-                      <span className="text-[#e54ea6]">Landscape Painting</span>
+                      Bangladesh, located in South Asia, is a land of vibrant
+                      culture, lush landscapes, and warm hospitality.
+                      <br /> <span className="text-[#e54ea6]">Bangladesh</span>
                       <div>
                         <button className=" mb-10 justify-center items-center btn btn-active  bg-[#345217]  mt-5 text-xl text-white">
                           GET A QUOTE
@@ -66,9 +66,10 @@ const Banner = () => {
                 <div className="slide1 slide200">
                   <h1 className=" text-3xl   lg:mb-36 md:text-bold md:mb-10">
                     {' '}
-                    Expressive faces in pencil, ink, or acrylic. <br />{' '}
+                    Bangladesh, located in South Asia, is a land of vibrant
+                    culture, lush landscapes, and warm hospitality. <br />{' '}
                     <span className="text-[rgba(242,151,174,0.97)]">
-                      Portrait Drawing
+                      Bangladesh
                     </span>
                     <div>
                       <button className=" mb-10 justify-center items-center btn btn-active  bg-[#345217]  mt-5 text-xl text-white">
@@ -82,9 +83,12 @@ const Banner = () => {
                 <div className="slide1 slide300">
                   <h1 className=" text-3xl  lg:mb-36 md:text-bold md:mb-10">
                     {' '}
-                    Soft florals and vivid animal portraits. <br />{' '}
+                    Vietnam, a land of breathtaking natural beauty and rich
+                    cultural heritage, offers travelers a tapestry of
+                    experiences to explore.
+                    <br />{' '}
                     <span className="text-[rgba(119,68,104,0.97)]">
-                      Watercolour Painting
+                      Vietnam
                     </span>
                     <div>
                       <button className=" mb-10 justify-center items-center btn btn-active  bg-[#345217]  mt-5 text-xl text-white">
@@ -98,10 +102,12 @@ const Banner = () => {
                 <div className="slide1 slide400">
                   <h1 className=" text-3xl  text-[#86469C] lg:mb-36 md:text-bold md:mb-10">
                     {' '}
-                    Realism meets abstraction in portraits and landscapes.{' '}
+                    Thailand, known as the "Land of Smiles," captivates visitors
+                    with its stunning beaches, rich culture, and vibrant city
+                    life.
                     <br />{' '}
                     <span className="text-[rgba(234,71,180,0.97)]">
-                      Oil Painting
+                      Thailand
                     </span>
                     <div>
                       <button className=" mb-10 justify-center items-center btn btn-active  bg-[#345217]  mt-5 text-xl text-white">

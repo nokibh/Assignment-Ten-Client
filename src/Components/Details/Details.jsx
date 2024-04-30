@@ -1,5 +1,5 @@
 import { FaLocationDot } from 'react-icons/fa6';
-import { MdCardTravel } from 'react-icons/md';
+import { MdCardTravel, MdMeetingRoom } from 'react-icons/md';
 import { SiSessionize } from 'react-icons/si';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 
@@ -37,7 +37,10 @@ const Details = () => {
                 {card.travel}
               </p>
             </div>
-            <div className="font-bold mb-3 mt-3">
+            <div className="flex gap-1  font-bold mb-3 mt-3">
+              <span>
+                <MdMeetingRoom />
+              </span>
               <p>{card.visitor}</p>
             </div>
             <Link to="/">
