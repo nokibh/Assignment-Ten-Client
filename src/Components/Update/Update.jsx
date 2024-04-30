@@ -5,7 +5,6 @@ import UseAuth from '../Hooks/UseAuth';
 const Update = () => {
   const list = useLoaderData();
   const {
-    _id,
     name,
     photo,
     country,
@@ -14,6 +13,10 @@ const Update = () => {
     price,
     travel,
     session,
+
+    description,
+
+    spot,
   } = list;
   const { user } = UseAuth();
   const handleAddUser = e => {
@@ -141,6 +144,7 @@ const Update = () => {
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#494fffbd]"
                   type="text"
+                  defaultValue={location}
                   placeholder="location"
                   id="Price"
                   name="location"
@@ -155,6 +159,7 @@ const Update = () => {
                 <input
                   className="w-full p-2 border rounded-md focus:outline-[#494fffbd]"
                   type="text"
+                  defaultValue={price}
                   placeholder="Enter Cost"
                   id="Price"
                   name="price"
@@ -169,6 +174,7 @@ const Update = () => {
                   className="w-full p-2 border rounded-md focus:outline-[#5549ffc3]"
                   type="text"
                   placeholder="Description"
+                  defaultValue={description}
                   id="Price"
                   name="description"
                 />
@@ -183,6 +189,7 @@ const Update = () => {
                   className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
                   type="text"
                   placeholder="Enter Image URL"
+                  defaultValue={photo}
                   id="image"
                   name="photo"
                 />
@@ -194,6 +201,7 @@ const Update = () => {
                   className="w-full p-2 border rounded-md focus:outline-[#5b49ffb8]"
                   type="text"
                   placeholder="Spot name"
+                  defaultValue={spot}
                   id="image"
                   name="spot"
                 />
@@ -208,6 +216,7 @@ const Update = () => {
                   id="brand"
                   className="w-full p-2 border rounded-md focus:outline-[#5849ffb8]"
                   type="text"
+                  defaultValue={session}
                   placeholder="Select Brand"
                 >
                   <option value="Summer" selected>
@@ -231,6 +240,7 @@ const Update = () => {
                   min={0}
                   type="number"
                   placeholder="Day"
+                  defaultValue={travel}
                   id="rating"
                   name="travel"
                 />
@@ -244,6 +254,7 @@ const Update = () => {
                 <input
                   name="visitor"
                   id="brand"
+                  defaultValue={visitor}
                   className="w-full p-2 border rounded-md focus:outline-[#494fffbd]"
                   type="text"
                   placeholder="Total visitor per Year"
