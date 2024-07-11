@@ -16,6 +16,8 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 // import Country from './Components/Country/Country';
 import Details from './Components/Details/Details';
 import Update from './Components/Update/Update';
+import { HelmetProvider } from 'react-helmet-async';
+import CountryBasedSpots from './Components/CountryBasedSpots';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,7 +32,6 @@ const router = createBrowserRouter([
         path: '/addspot',
         element: (
           <PrivateRoute>
-            {' '}
             <AddTourist></AddTourist>
           </PrivateRoute>
         ),
@@ -39,7 +40,6 @@ const router = createBrowserRouter([
         path: '/mylist',
         element: (
           <PrivateRoute>
-            {' '}
             <MyList></MyList>
           </PrivateRoute>
         ),
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             <Details></Details>
           </PrivateRoute>
         ),
-        loader: () => fetch('http://localhost:5000/country'),
+        loader: () => fetch('http://localhost:5000'),
       },
       {
         path: '/contact',
@@ -68,8 +68,13 @@ const router = createBrowserRouter([
       {
         path: 'update/:id',
         element: <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/${params.id}`),
+      },
+      {
+        path: '/country-based-spots/:country',
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/country/${params.id}`),
+          fetch(`http://localhost:5000/getSpotsByCountry/${params.country}`),
+        element: <CountryBasedSpots></CountryBasedSpots>,
       },
     ],
   },
@@ -77,7 +82,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FirebaseProvider>
-      <RouterProvider router={router} />
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </FirebaseProvider>
   </React.StrictMode>
 );

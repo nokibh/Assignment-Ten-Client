@@ -49,7 +49,7 @@ const Update = () => {
       visitor,
     };
     console.log(updateSpot);
-    fetch(`http://localhost:5000/country/${_id}`, {
+    fetch(`http://localhost:5000/${_id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

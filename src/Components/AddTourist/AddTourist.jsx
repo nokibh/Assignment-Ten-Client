@@ -33,7 +33,7 @@ const AddTourist = () => {
       visitor,
     };
     console.log(addAll);
-    fetch('http://localhost:5000/spots', {
+    fetch('https://assignment-ten-server-green.vercel.app/spots', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

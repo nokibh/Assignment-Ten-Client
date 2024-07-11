@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDLTV5XyfIgM1ICiZiE5YjM5PkLH-GQ2Us',
-  authDomain: 'tourisum-spot.firebaseapp.com',
-  projectId: 'tourisum-spot',
-  storageBucket: 'tourisum-spot.appspot.com',
-  messagingSenderId: '58019808524',
-  appId: '1:58019808524:web:87cba0350d577b3cfeb529',
+  apiKey: 'AIzaSyANYKKY57Tv42R0DZANuHlsefqKtvTDX2Q',
+  authDomain: 'assignment-10-fd8f9.firebaseapp.com',
+  projectId: 'assignment-10-fd8f9',
+  storageBucket: 'assignment-10-fd8f9.appspot.com',
+  messagingSenderId: '748304587411',
+  appId: '1:748304587411:web:0c3acb04f985d9a3a34b66',
 };
 
 // Initialize Firebase

@@ -7,7 +7,9 @@ const MyList = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mylist/${user?.email}`)
+    fetch(
+      `https://assignment-ten-server-green.vercel.app/mylist/${user?.email}`
+    )
       .then(res => res.json())
       .then(data => {
         setItems(data);
