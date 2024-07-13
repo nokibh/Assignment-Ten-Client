@@ -18,6 +18,7 @@ import Details from './Components/Details/Details';
 import Update from './Components/Update/Update';
 import { HelmetProvider } from 'react-helmet-async';
 import CountryBasedSpots from './Components/CountryBasedSpots';
+import TouristsSpotDetails from './Components/TouristsSpotDetails';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,8 +27,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        loader: () => fetch('http://localhost:5000/allTouristsSpot'),
         element: <Home></Home>,
       },
+
       {
         path: '/addspot',
         element: (
@@ -75,6 +78,11 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/getSpotsByCountry/${params.country}`),
         element: <CountryBasedSpots></CountryBasedSpots>,
+      },
+      {
+        path: '/spot-details/:id',
+        loader: () => fetch('http://localhost:5000/allTouristsSpot'),
+        element: <TouristsSpotDetails></TouristsSpotDetails>,
       },
     ],
   },
